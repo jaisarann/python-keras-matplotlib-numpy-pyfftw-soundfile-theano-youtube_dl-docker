@@ -3,5 +3,7 @@ matplotlib
 numpy
 pyfftw
 soundfile
+tensorflow
+tensorflow-gpu
 theano
 youtube_dl
