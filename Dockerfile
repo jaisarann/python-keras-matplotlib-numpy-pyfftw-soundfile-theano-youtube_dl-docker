@@ -8,7 +8,10 @@ RUN mkdir -p /usr/src/app && apt-get update && apt-get --install-suggests --yes 
 
 WORKDIR /usr/src/app
 
+COPY requirements.txt /usr/src/app/
+RUN pip install -r requirements.txt
+
 ONBUILD COPY requirements.txt /usr/src/app/
 ONBUILD COPY . /usr/src/app
 
-ONBUILD RUN pip install --no-cache-dir -r requirements.txt
+ONBUILD RUN pip install -r requirements.txt
