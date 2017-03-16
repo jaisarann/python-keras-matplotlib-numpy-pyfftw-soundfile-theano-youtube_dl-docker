@@ -1,0 +1,7 @@
+keras
+matplotlib
+numpy
+pyfftw
+soundfile
+theano
+youtube_dl
