@@ -2,6 +2,7 @@ keras
 matplotlib
 numpy
 pyfftw
+setuptools-git
 soundfile
 tensorflow
 theano
