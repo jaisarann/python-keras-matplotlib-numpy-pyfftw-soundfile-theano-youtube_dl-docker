@@ -9,9 +9,9 @@ RUN mkdir -p /usr/src/app && apt-get update && apt-get --install-suggests --yes 
 WORKDIR /usr/src/app
 
 COPY requirements.txt /usr/src/app/
-RUN pip3 install -r requirements.txt --upgrade
+RUN pip3 install --compile --process-dependency-links -r requirements.txt --upgrade
 
 ONBUILD COPY requirements.txt /usr/src/app/
 ONBUILD COPY . /usr/src/app
 
-ONBUILD RUN pip3 install -r requirements.txt --upgrade
+ONBUILD RUN CFLAGS="-march=native" pip3 install --force-reinstall --compile --process-dependency-links -r requirements.txt --upgrade
