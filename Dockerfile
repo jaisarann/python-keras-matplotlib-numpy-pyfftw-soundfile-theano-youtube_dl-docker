@@ -25,4 +25,4 @@ ONBUILD WORKDIR /usr/src/app
 ONBUILD COPY requirements.txt /usr/src/app/
 ONBUILD COPY . /usr/src/app
 
-ONBUILD RUN CFLAGS="-march=native" pip3 install --force-reinstall --compile --process-dependency-links -r requirements.txt --upgrade
+ONBUILD RUN CFLAGS="-march=native" pip3 install --compile --process-dependency-links -r requirements.txt --upgrade
